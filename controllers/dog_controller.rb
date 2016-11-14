@@ -1,22 +1,22 @@
-class CatController < ApplicationController
+class DogController < ApplicationController
 
   get '/' do
-    Cat.all.to_json
+    Dog.all.to_json
 
-    # @model = Cat.all
+    # @model = Dog.all
     # @model.to_json
   end
 
   get '/:id' do
     @id = params[:id]
-    Cat.find(@id).to_json
+    Dog.find(@id).to_json
 
-    # @model = Cat.find(params[:id])
+    # @model = Dog.find(params[:id])
     # @model.to_json
   end
 
   post '/' do
-    # @model = Cat.new
+    # @model = Dog.new
     # @model.name = params[:name]
     # @model.note = params[:note]
     # @model.img = params[:img]
@@ -27,7 +27,7 @@ class CatController < ApplicationController
     @note = params[:note]
     @img = params[:img]
 
-    @new_row = Cat.new
+    @new_row = Dog.new
     @new_row.name = @name
     @new_row.note = @note
     @new_row.img = @img
@@ -42,7 +42,7 @@ class CatController < ApplicationController
     @note = params[:note]
     @img = params[:img]
 
-    @new_row = Cat.find(@id)
+    @new_row = Dog.find(@id)
     @new_row.name = @name
     @new_row.note = @note
     @new_row.img = @img
@@ -53,7 +53,7 @@ class CatController < ApplicationController
 
   delete '/:id' do
     @id = params[:id]
-    @model = Cat.find(@id)
+    @model = Dog.find(@id)
     @model.destroy
     "Adopted!!!!"
   end
