@@ -1,0 +1,23 @@
+#  create user 'jennifer'@'localhost' identified by 'catlove';
+#  grant all privileges on cat_rescue.* to 'jennifer'@'localhost';
+
+default:
+  adapter: mysql2
+  database: cat_rescue
+  username: jennifer
+  password: catlove
+  host: localhost
+
+development:
+  adapter: mysql2
+  database: cat_rescue
+  username: jennifer
+  password: catlove
+  host: localhost
+
+production:
+  adapter: mysql2
+  database: cat_rescue
+  username: jennifer
+  password: catlove
+  host: localhost
