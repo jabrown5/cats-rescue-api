@@ -20,7 +20,7 @@ class CatController < ApplicationController
     # @model.name = params[:name]
     # @model.note = params[:note]
     # @model.img = params[:img]
-    # @mode.save
+    # @model.save
     # @model.to_json
 
     @name = params[:name]
