@@ -49,6 +49,14 @@ class CatController < ApplicationController
     @new_row.save
 
     @new_row.to_json
+
+    @model = Post.find(params[:id])
+    @model.title = params[:title]
+    @model.content = params[:content]
+    @model.tags = params[:tags]
+    @model.save
+    @model.to_json
+
   end
 
   delete '/:id' do
